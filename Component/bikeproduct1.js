@@ -2,22 +2,23 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Car() {
-    const image1 = {
-        uri: 'https://img2.carmax.com/img/vehicles/mmy-toyota-prius-2013/1.jpg?width=900',
-      };
+export default function Bike1({navigation}) {
+  const image1 = {
+    uri: 'https://motobanda.pl/uploads/motors/336/2014YamahaYBR125EURedSpiritStudio002-600x400.jpg',
+  };
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.Doom}>Cars</Text>
+      <Text style={styles.Doom}>Bikes</Text>
         <View style={styles.Productalign}>
             <Image source={image1} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>Toyota Prius</Text>
-              <Text style={styles.textButton}>PKR 27,000,00</Text>
+              <Text style={styles.textButton}>Yamaha YBR 125</Text>
+              <Text style={styles.textButton}>PKR 2,625,00</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
-        <Text>This Car combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
+            <hr/>
+        <Text>Motorbike that combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
             <View>
                 <ul>
                     <li>Engine: The YBR 125 typically comes with a 125cc, air-cooled, single-cylinder engine. It is known for its smooth performance and fuel efficiency.</li>
@@ -28,11 +29,11 @@ export default function Car() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

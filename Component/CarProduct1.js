@@ -2,26 +2,22 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
-    const image4 = {
-        uri: 'https://startuppakistan.com.pk/wp-content/uploads/2022/01/2021-kawasaki-ninja-zx-14r-specs-features-photo.jpeg.webp',
+export default function Car1({navigation}) {
+    const image1 = {
+        uri: 'https://img2.carmax.com/img/vehicles/mmy-toyota-prius-2013/1.jpg?width=900',
       };
-
-
-
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.Doom}>Bikes</Text>
+      <Text style={styles.Doom}>Cars</Text>
         <View style={styles.Productalign}>
-            <Image source={image4} style={styles.image}></Image>
+            <Image source={image1} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>Ninja ZX- 14R</Text>
-              <Text style={styles.textButton}>PKR 1,105,70</Text>
+              <Text style={styles.textButton}>Toyota Prius</Text>
+              <Text style={styles.textButton}>PKR 27,000,00</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
-            <hr/>
-        <Text>Motorbike that combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
+        <Text>This Car combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
             <View>
                 <ul>
                     <li>Engine: The YBR 125 typically comes with a 125cc, air-cooled, single-cylinder engine. It is known for its smooth performance and fuel efficiency.</li>
@@ -32,11 +28,11 @@ export default function Bike() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

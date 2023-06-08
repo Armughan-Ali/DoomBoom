@@ -2,7 +2,7 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Car() {
+export default function Car({navigation}) {
   const image1 = {
     uri: 'https://img2.carmax.com/img/vehicles/mmy-toyota-prius-2013/1.jpg?width=900',
   };
@@ -22,7 +22,7 @@ export default function Car() {
     <ScrollView style={styles.container}>
       <Text style={styles.Doom}>Cars</Text>
         <View>
-         <TouchableOpacity style={styles.choicealign} >
+         <TouchableOpacity onPress={() => navigation.navigate('carP1')} style={styles.choicealign} >
             <Image source={image1} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Toyota Prius</Text>
@@ -30,7 +30,7 @@ export default function Car() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign} >
+         <TouchableOpacity onPress={() => navigation.navigate('carP2')} style={styles.choicealign} >
             <Image source={image2} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>kia Stringer</Text>
@@ -38,7 +38,7 @@ export default function Car() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign}>
+         <TouchableOpacity onPress={() => navigation.navigate('carP3')} style={styles.choicealign}>
             <Image source={image3} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>BMW I7</Text>
@@ -46,7 +46,7 @@ export default function Car() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign}>
+         <TouchableOpacity onPress={() => navigation.navigate('carP4')} style={styles.choicealign}>
             <Image source={image4} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Hyundai Sonata</Text>
@@ -64,11 +64,11 @@ export default function Car() {
 
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

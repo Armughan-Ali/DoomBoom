@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View,Image,TouchableOpacity} from 'react-native';
-export default function Screen2() {
+export default function Screen2({navigation}) {
   const image = {
     uri: 'https://img.freepik.com/free-vector/vehicle-sale-concept-illustration_114360-2082.jpg?size=626&ext=jpg&ga=GA1.1.374823830.1685374953&semt=ais',
   };
@@ -8,8 +8,8 @@ export default function Screen2() {
         <Image source={image} style={styles.image}/>
         <Text style={styles.text}>Is it Affordable or where to access good price</Text>
         <View style={styles.tabbutton}>
-          <TouchableOpacity style={styles.Button}><Text>Back</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.Button}><Text>Next</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Onboard')} style={styles.Button}><Text>Back</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('screen3')} style={styles.Button}><Text>Next</Text></TouchableOpacity>
         </View>
     </View>
   );
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   {
     color:'#001B39',
     fontSize: 12,
-    textAlign:'Center',
+    textAlign:'center',
     fontWeight: 'bold',
     marginBottom: 80,
   },

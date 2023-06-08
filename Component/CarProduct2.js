@@ -2,7 +2,7 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Car() {
+export default function Car2({navigation}) {
     const image2 = {
         uri: 'https://img2.carmax.com/img/vehicles/mmy-kia-stinger-2019/1.jpg?width=900',
       };
@@ -29,11 +29,11 @@ export default function Car() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

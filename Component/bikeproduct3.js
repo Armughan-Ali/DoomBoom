@@ -2,23 +2,26 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
-    const image4 = {
-        uri: 'https://img2.carmax.com/img/vehicles/mmy-hyundai-sonata-2015/1.jpg?width=900',
+export default function Bike3({navigation}) {
+    const image3 = {
+        uri: 'https://imgd.aeplcdn.com/664x374/bw/models/suzuki-m800-intruder-147.jpg?20190103151915&q=75',
       };
+
+
+
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.Doom}>Cars</Text>
+      <Text style={styles.Doom}>Bikes</Text>
         <View style={styles.Productalign}>
-            <Image source={image4} style={styles.image}></Image>
+            <Image source={image3} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>Hyundai Sonata</Text>
-              <Text style={styles.textButton}>PKR 8,149,000</Text>
+              <Text style={styles.textButton}>Intruder M800</Text>
+              <Text style={styles.textButton}>PKR 17 00,00</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
             <hr/>
-        <Text>This Car combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
+        <Text>Motorbike that combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
             <View>
                 <ul>
                     <li>Engine: The YBR 125 typically comes with a 125cc, air-cooled, single-cylinder engine. It is known for its smooth performance and fuel efficiency.</li>
@@ -29,11 +32,11 @@ export default function Bike() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

@@ -2,25 +2,23 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
-    const image2 = {
-        uri: 'https://startuppakistan.com.pk/wp-content/uploads/2022/01/honda-cbr500r-abs-2021-lauch-date-price-specs-1536x1023.jpeg.webp',
+export default function Car3({navigation}) {
+    const image3 = {
+        uri: 'https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfvhsd10tLhu1XzWVo7puMLWFmdkAj5DOPitIqZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snpq6v6ODubLz2aKqfkSPjmB2fJj5DOP5Eagd%25kcWExHWpbl8FO2k3Hy2o24tXATQBrXpFhtAlZ24riIqfJscpF4HvVUo0KiIFJGzYfABHvIT9aqeO2JGvloRyhgpT9GsLx6NUilo90yG1obHsLoAC9BYhJ0yLOEVt7qTACygNS3WmlOECUka5t7sgNEbn%25VP10UkNh5FJhVAbnkq8hGDzOh5nmPmD0agd56reMnTNIu8dtE6Cgk1F7GquAw',
       };
-
-
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.Doom}>Bikes</Text>
+      <Text style={styles.Doom}>Cars</Text>
         <View style={styles.Productalign}>
-            <Image source={image2} style={styles.image}></Image>
+            <Image source={image3} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>Honda CBR 500</Text>
-              <Text style={styles.textButton}>PKR 1250,00</Text>
+              <Text style={styles.textButton}>BMW I7</Text>
+              <Text style={styles.textButton}>50,000,00</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
             <hr/>
-        <Text>Motorbike that combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
+        <Text>This Car combines reliability, fuel efficiency, and versatility in one sleek package. With its powerful yet efficient engine, smooth transmission, and comfortable ride, the YBR 125 is designed to conquer both city streets and open roads with ease.</Text>
             <View>
                 <ul>
                     <li>Engine: The YBR 125 typically comes with a 125cc, air-cooled, single-cylinder engine. It is known for its smooth performance and fuel efficiency.</li>
@@ -31,11 +29,11 @@ export default function Bike() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

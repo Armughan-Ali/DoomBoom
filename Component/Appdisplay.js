@@ -18,7 +18,7 @@ import {
         <ImageBackground source={image} style={styles.Image}>
           <Text style={styles.Text1}>DOOMBOOM</Text>
           <Text style={styles.Text2}>Know Your Type Cars and Bikes</Text>
-            <TouchableOpacity style={styles.Button} onPress={() => (navigation.navigate ('Onboard'))}>
+            <TouchableOpacity style={styles.Button} onPress={() => (navigation.navigate('Onboard'))}>
               <Text>Get Started</Text>
             </TouchableOpacity>
         </ImageBackground>
@@ -39,7 +39,7 @@ import {
     },
     Text2: {
         fontSize: 15,
-        fontWeight: 'semibold',
+        fontWeight: 400,
         color: '#FFFFFF',
         paddingBottom: 30,
         paddingLeft: 40

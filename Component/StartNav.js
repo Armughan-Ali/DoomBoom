@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View,Image,TouchableOpacity} from 'react-native';
 
-export default function StartNav(navigation) {
+export default function StartNav({navigation}) {
   const image = {
     uri: 'https://img.freepik.com/free-vector/front-car-concept-illustration_114360-7978.jpg?size=626&ext=jpg&ga=GA1.1.374823830.1685374953&semt=ais',
   };
@@ -8,7 +8,7 @@ export default function StartNav(navigation) {
     <View style={styles.container}>
         <Image source={image} style={styles.image}/>
         <Text style={styles.text}>OH WHAT A CAR! need to know details at your one click</Text>
-        <TouchableOpacity style={styles.Button}><Text>Next</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('screen2')} style={styles.Button}><Text>Next</Text></TouchableOpacity>
     </View>
   );
 }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   {
     color:'#001B39',
     fontSize: 12,
-    textAlign:'Center',
+    textAlign:'center',
     fontWeight: 'bold',
     marginBottom: 80,
   },

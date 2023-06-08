@@ -2,18 +2,18 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Car() {
-    const image3 = {
-        uri: 'https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfvhsd10tLhu1XzWVo7puMLWFmdkAj5DOPitIqZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snpq6v6ODubLz2aKqfkSPjmB2fJj5DOP5Eagd%25kcWExHWpbl8FO2k3Hy2o24tXATQBrXpFhtAlZ24riIqfJscpF4HvVUo0KiIFJGzYfABHvIT9aqeO2JGvloRyhgpT9GsLx6NUilo90yG1obHsLoAC9BYhJ0yLOEVt7qTACygNS3WmlOECUka5t7sgNEbn%25VP10UkNh5FJhVAbnkq8hGDzOh5nmPmD0agd56reMnTNIu8dtE6Cgk1F7GquAw',
+export default function Car4({navigation}) {
+    const image4 = {
+        uri: 'https://img2.carmax.com/img/vehicles/mmy-hyundai-sonata-2015/1.jpg?width=900',
       };
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.Doom}>Cars</Text>
         <View style={styles.Productalign}>
-            <Image source={image3} style={styles.image}></Image>
+            <Image source={image4} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>BMW I7</Text>
-              <Text style={styles.textButton}>50,000,00</Text>
+              <Text style={styles.textButton}>Hyundai Sonata</Text>
+              <Text style={styles.textButton}>PKR 8,149,000</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
@@ -29,11 +29,11 @@ export default function Car() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

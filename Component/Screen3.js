@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View,Image,TouchableOpacity} from 'react-native';
-export default function Screen3() {
+export default function Screen3({navigation}) {
   const image = {
     uri: 'https://img.freepik.com/free-vector/group-people-chatting-each-other-using-phone_74855-10709.jpg?w=740&t=st=1685879379~exp=1685879979~hmac=f4b03f42302759025af3a52f471a5793dd82603fe83db3b5423036edf4d65657',
   };
@@ -8,8 +8,8 @@ export default function Screen3() {
         <Image source={image} style={styles.image}/>
         <Text style={styles.text}>Get it on One Click</Text>
         <View style={styles.viewbutton}>
-        <TouchableOpacity style={styles.Button}><Text>Back</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.Button}><Text>Continue</Text></TouchableOpacity></View>
+        <TouchableOpacity onPress={() => navigation.navigate('screen2')} style={styles.Button}><Text>Back</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.Button}><Text>Continue</Text></TouchableOpacity></View>
     </View>
   );
 }
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   {
     color:'#001B39',
     fontSize: 12,
-    textAlign:'Center',
+    textAlign:'center',
     fontWeight: 'bold',
     marginBottom: 80,
   },

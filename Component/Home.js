@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.Doom}>DoomBoom</Text>
@@ -16,11 +16,11 @@ export default function Home() {
           </TouchableOpacity>
           </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </View>
@@ -46,13 +46,13 @@ const styles = StyleSheet.create({
   },
   Views: {
     backgroundColor: '#fff',
-    alignItems:'Center',
+    alignItems:'center',
     justifyContent: 'center',
   },
   Buttons: {
     margin: 10,
     backgroundColor: '#fff',
-    alignItems:'Center',
+    alignItems:'center',
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: '#9BA1A7',

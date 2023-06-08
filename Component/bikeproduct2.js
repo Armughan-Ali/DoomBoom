@@ -2,21 +2,20 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
-    const image5 = {
-        uri: 'https://startuppakistan.com.pk/wp-content/uploads/2022/01/first-ride-2004-bmw-k1200s-or-visordown.jpeg.webp',
+export default function Bike2({navigation}) {
+    const image2 = {
+        uri: 'https://startuppakistan.com.pk/wp-content/uploads/2022/01/honda-cbr500r-abs-2021-lauch-date-price-specs-1536x1023.jpeg.webp',
       };
-
 
 
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.Doom}>Bikes</Text>
         <View style={styles.Productalign}>
-            <Image source={image5} style={styles.image}></Image>
+            <Image source={image2} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>BMW K 1200 S</Text>
-              <Text style={styles.textButton}>PKR 1,915,62</Text>
+              <Text style={styles.textButton}>Honda CBR 500</Text>
+              <Text style={styles.textButton}>PKR 1250,00</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
@@ -32,11 +31,11 @@ export default function Bike() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>

@@ -2,7 +2,7 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
+export default function Bike({navigation}) {
   const image1 = {
     uri: 'https://motobanda.pl/uploads/motors/336/2014YamahaYBR125EURedSpiritStudio002-600x400.jpg',
   };
@@ -24,7 +24,7 @@ export default function Bike() {
     <ScrollView style={styles.container}>
       <Text style={styles.Doom}>Bikes</Text>
         <View>
-         <TouchableOpacity style={styles.choicealign} >
+         <TouchableOpacity onPress={() => navigation.navigate('bikeP1')} style={styles.choicealign} >
             <Image source={image1} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Yamaha YBR 125</Text>
@@ -32,7 +32,7 @@ export default function Bike() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign} onPress={Bike1Model2}>
+         <TouchableOpacity onPress={() => navigation.navigate('bikeP2')} style={styles.choicealign}>
             <Image source={image2} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Honda CBR 500</Text>
@@ -40,7 +40,7 @@ export default function Bike() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign} onPress={Bike1Model3}>
+         <TouchableOpacity onPress={() => navigation.navigate('bikeP3')} style={styles.choicealign}>
             <Image source={image3} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Intruder M800</Text>
@@ -48,7 +48,7 @@ export default function Bike() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign} onPress={Bike1Model4}>
+         <TouchableOpacity onPress={() => navigation.navigate('bikeP4')} style={styles.choicealign}>
             <Image source={image4} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Ninja ZX- 14R</Text>
@@ -56,7 +56,7 @@ export default function Bike() {
             </View>
          </TouchableOpacity>
 
-         <TouchableOpacity style={styles.choicealign} onPress={Bike1Model5}>
+         <TouchableOpacity onPress={() => navigation.navigate('bikeP5')} style={styles.choicealign}>
             <Image source={image5} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>BMW K 1200 S</Text>
@@ -66,11 +66,11 @@ export default function Bike() {
 
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
       

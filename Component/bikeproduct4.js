@@ -2,9 +2,9 @@
 import { StyleSheet, Text, ScrollView,TouchableOpacity,View,Image,Modal} from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
-export default function Bike() {
-    const image3 = {
-        uri: 'https://imgd.aeplcdn.com/664x374/bw/models/suzuki-m800-intruder-147.jpg?20190103151915&q=75',
+export default function Bike4({navigation}) {
+    const image4 = {
+        uri: 'https://startuppakistan.com.pk/wp-content/uploads/2022/01/2021-kawasaki-ninja-zx-14r-specs-features-photo.jpeg.webp',
       };
 
 
@@ -13,10 +13,10 @@ export default function Bike() {
     <ScrollView style={styles.container}>
       <Text style={styles.Doom}>Bikes</Text>
         <View style={styles.Productalign}>
-            <Image source={image3} style={styles.image}></Image>
+            <Image source={image4} style={styles.image}></Image>
             <View style={styles.textgap}>
-              <Text style={styles.textButton}>Intruder M800</Text>
-              <Text style={styles.textButton}>PKR 17 00,00</Text>
+              <Text style={styles.textButton}>Ninja ZX- 14R</Text>
+              <Text style={styles.textButton}>PKR 1,105,70</Text>
             </View>
         </View>
         <View style={styles.textsetting}>
@@ -32,11 +32,11 @@ export default function Bike() {
             </View>
         </View>
         <View style={styles.Tab}>
-          <TouchableOpacity style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.tabbuttons}><Entypo name="home" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Car')} style={styles.tabbuttons}><FontAwesome5 name="car-side" size={24} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
+          <TouchableOpacity onPress={() => navigation.navigate('Bike')} style={styles.tabbuttons}><FontAwesome5 name="motorcycle" size={24} color="white" />
           </TouchableOpacity>
       </View>
     </ScrollView>
