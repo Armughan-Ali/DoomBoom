@@ -26,7 +26,7 @@ export default function Car() {
             <Image source={image1} style={styles.image}></Image>
             <View>
               <Text style={styles.textButton}>Toyota Prius</Text>
-              <Text style={styles.textButton}>PKR 27,000,000</Text>
+              <Text style={styles.textButton}>PKR 27,000,00</Text>
             </View>
          </TouchableOpacity>
 
